@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+
+    <style>
+     body{
+        background-color: cornflowerblue;
+        color: white;
+
+     }
+    </style>
+    
+</head>
+<body>
+    
+    <h1>Sistema de Nacionalidade</h1>
+    Qual sua nacionalidade? <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="metodo()">
+    <div id="res">
+      
+    </div>
+    <script>
+        function metodo() {
+        var nac = window.document.querySelector('input#nac').value;
+        var res = window.document.querySelector('div#res')
+        res.innerHTML = `<p>Você é <strong>${nac}</strong> <p>`
+
+        if (nac == `brasileiro` || nac == `brasileira`) {
+            res.innerHTML += `<p>Você é do Brasil!<p>`
+            } else {
+                res.innerHTML += `<p>Então você é estrangeiro!!<p>`
+           }
+    }
+    </script>    
+</body>
+</html>
